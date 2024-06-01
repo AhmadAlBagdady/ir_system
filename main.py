@@ -3,7 +3,7 @@ import pandas as pd
 
 import pickle
 
-from text_processors.remove_punctuation_processor import RemovePunctuationProcessor
+from text_processors.remove_punctuations_processor import RemovePunctuationsProcessor
 from text_processors.remove_stopwords_processor import RemoveStopwordsProcessor
 from text_processors.spell_checker_processor import SpellCheckerProcessor
 from text_processors.stemmer_processor import StemmerProcessor
