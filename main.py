@@ -20,12 +20,12 @@ from text_processors.word_tokenize_processor import WordTokenizeProcessor
 
 def load_csv(file_path):
     df = pd.read_csv(file_path, usecols=['text_right'], nrows=10)
-    ahmad = csv_builder_processor('Ahmed loves banana, will you try anything')
-    return ahmad
+    df['processed_text'] = df['text_right'].apply(csv_builder_processor)
+    return df
 
 
 def csv_builder_processor(text):
-    removePunctuation = RemovePunctuationProcessor(text)
+    # removePunctuation = RemovePunctuationProcessor(text)
     wordTokenizeProcessor = WordTokenizeProcessor(text)
     removeStopWordsProcessor = RemoveStopwordsProcessor(wordTokenizeProcessor.tokens)
     stemmerProcessor = StemmerProcessor(removeStopWordsProcessor.tokens)
