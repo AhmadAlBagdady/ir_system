@@ -10,8 +10,4 @@ class RemovePunctuationProcessor(BaseProcessor):
         pass
 
     def __remove_punctuation(self):
-        new_tokens = []
-        for token in self.inputs.split():
-            new_tokens.append(token.translate(str.maketrans('', '', string.punctuation)))
-
-        self.tokens = new_tokens
+        self.tokens = self.inputs.translate(str.maketrans('', '', string.punctuation))
