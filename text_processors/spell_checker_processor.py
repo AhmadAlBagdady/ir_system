@@ -1,10 +1,11 @@
 from text_processors.base_processor import BaseProcessor
 from spellchecker import SpellChecker
 
+
 class SpellCheckerProcessor(BaseProcessor):
-    def __init__(self,inputs:list):
-        self.inputs=inputs
-        
+    def __init__(self, inputs: list):
+        self.inputs = inputs
+
         self.__correct_sentence_spelling()
         pass
 
