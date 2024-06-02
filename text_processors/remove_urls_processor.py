@@ -12,3 +12,4 @@ class RemoveUrlsProcessor(BaseProcessor):
     def __remove_urls(self):
         url_pattern = r'https?://\S+|www\.\S+'
         self.tokens = re.sub(url_pattern, '', self.inputs)
+        

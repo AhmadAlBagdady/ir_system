@@ -45,6 +45,7 @@ def build_inverted_index(tfidf_matrix, tfidf_vectorizer):
 
 
 index = build_inverted_index(tfidf_matrix, tfidf_vectorizer)
+
 def save_index(index, file_name):
     with open(file_name, 'wb') as f:
         pickle.dump(index, f)
