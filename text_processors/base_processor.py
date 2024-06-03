@@ -2,8 +2,9 @@ from abc import ABC
 
 
 class BaseProcessor(ABC):
-    tokens:str
     inputs:str|list
+    
+    tokens:str
 
     def get_tokens(self):
         return self.tokens
